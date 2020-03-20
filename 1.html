@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+</head>
+<style>
+    .bg-img {
+  /* The image used */
+  background-image: url("2.jpg");
+        opacity:100 ;
+  min-height: 1000px;
+
+  /* Center and scale the image nicely */
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 10;
+}
+	fieldset {
+  background-color: rgb(7, 171, 247);
+  text-align:center ;
+  display: block;
+  margin-left: 450px;
+  margin-right: 450px;
+  padding-top: 1.35em;
+  padding-bottom: 1.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px groove (internal value);
+}
+	input[type=text]:focus {
+  background-color: lightblue;
+}
+	input[type=button], input[type=submit], input[type=reset] {
+  background-color: rgb(37, 3, 129);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 3px 2px;
+  cursor: pointer;
+}
+body{
+      background-color: rgb(29, 188, 199);
+      
+}
+h1{
+    text-transform: uppercase ;
+}
+
+</style>
+
+<body> <img src="">
+<h1><center> National Workshop for Web Technology</center> </h1>
+<div class="bg-img">
+	<form action="insert.php" method="POST">
+
+	<fieldset >
+  <legend>Registration form:</legend>
+  Firstname:<input type="text" id=fname name=Firstname onblur="myfunc()"> Lastname: <input type="text" id=lname name=Lastname onblur="myfunc()"><br><br>
+
+  <label for="occupation">select your occupation:</label>
+  <select id="occupation" name="occupation">
+    <option value="Student">Student</option>
+    <option value="Faculty">Faculty</option>
+    <option value="Professional">Professional</option>
+    <option value="Firm representative">Firm representative</option>
+  </select><br><br>
+
+    email:<input type="text" name="email"><br><br>
+
+    Password: <input type="password" name=password><br><br>
+
+  DOB:<br> <input type="date" name="DOB"><br><br>
+
+  country:<input type="text" name="country"><br><br>
+
+  gender:<br>
+  <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br><br>
+  
+ 
+    phone:<input type="number"><br><br>
+
+    <input type="submit"> <input type="reset"><br>
+    <br>
+
+  </fieldset>
+  </form>
+</div>
+  <script>
+    function myfunc() {
+      var x = document.getElementById("fname");
+      var y = document.getElementById("lname");
+      x.value = x.value.toUpperCase();
+      y.value = y.value.toUpperCase();
+    }
+    </script>
+</body>
+
+</html>
